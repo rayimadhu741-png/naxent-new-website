@@ -1,0 +1,1467 @@
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+.investors-page,
+.investors-page *,
+.investor-contact-section,
+.investor-contact-section * {
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+.investors-page {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    color: #092b69;
+    margin-top: 0 !important;
+    padding-top: 116px !important;
+    /* MAIN FIX - About page tho same 116px gap - global lekunda */
+}
+
+.investors-page a {
+    text-decoration: none;
+}
+
+.investors-page button,
+.investors-page input,
+.investors-page textarea {
+    font-family: inherit;
+}
+
+/* =========================================================
+   INVESTOR HERO - FIXED
+========================================================= */
+.investor-hero {
+    position: relative;
+    width: 100%;
+    min-height: auto !important;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-start !important;
+    border-top: none !important;
+    border-bottom: 1px solid #0b2a5b;
+    padding-top: 24px !important;
+}
+
+.investor-container {
+    position: relative;
+    z-index: 5;
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 50px;
+    padding: 16px 0 80px !important;
+    /* 32px nundi 16px ki */
+}
+
+/* BACKGROUND DECORATIONS */
+.investor-bg {
+    position: absolute;
+    pointer-events: none;
+}
+
+
+.investor-bg-one {
+    width: 430px;
+    height: 430px;
+    top: -190px;
+    right: -150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(63, 176, 255, 0.17), rgba(63, 176, 255, 0));
+}
+
+.investor-bg-two {
+    width: 280px;
+    height: 280px;
+    bottom: -160px;
+    left: -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 211, 191, 0.12), rgba(74, 211, 191, 0));
+}
+
+/* HERO LEFT CONTENT */
+.investor-content {
+    position: relative;
+    z-index: 10;
+    max-width: 570px;
+}
+
+.investor-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: #087cf5;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+}
+
+.investor-eyebrow-line {
+    width: 40px;
+    height: 3px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #087cf5, #52c7ff);
+}
+
+.investor-title {
+    margin: 0;
+    color: #092b69;
+    font-size: clamp(48px, 5vw, 68px);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.investor-title span {
+    display: block;
+    color: #087cf5;
+}
+
+.investor-description {
+    max-width: 540px;
+    margin: 28px 0 32px;
+    color: #526b8e;
+    font-size: 17px;
+    line-height: 1.75;
+    font-weight: 500;
+}
+
+.investor-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 54px;
+    padding: 0 22px 0 25px;
+    border-radius: 50px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #087cf5, #159eea);
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 12px 30px rgba(8, 124, 245, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.investor-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(8, 124, 245, 0.25);
+}
+
+.investor-button-arrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #087cf5;
+    background: #ffffff;
+    font-size: 17px;
+}
+
+/* HERO RIGHT VISUAL - SAME */
+.investor-visual {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-circle {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95), rgba(218, 243, 255, 0.78) 52%, rgba(190, 232, 255, 0.55) 100%);
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.9);
+}
+
+.visual-dots {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 7px);
+    gap: 7px;
+}
+
+.visual-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #78c9f7;
+}
+
+.growth-arrow {
+    position: absolute;
+    width: 510px;
+    max-width: 100%;
+    height: auto;
+    left: 50%;
+    top: 110px;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.growth-chart {
+    position: absolute;
+    left: 55px;
+    bottom: 72px;
+    width: 240px;
+    height: 135px;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    z-index: 3;
+}
+
+.growth-bar {
+    position: relative;
+    width: 34px;
+    border-radius: 8px 8px 2px 2px;
+    background: linear-gradient(180deg, #73d6ff, #1591ef);
+}
+
+.growth-bar::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    border-radius: 50%;
+    background: #8ee0ff;
+}
+
+.growth-bar span {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.growth-bar-one {
+    height: 48px;
+}
+
+.growth-bar-two {
+    height: 70px;
+}
+
+.growth-bar-three {
+    height: 87px;
+}
+
+.growth-bar-four {
+    height: 108px;
+}
+
+.growth-bar-five {
+    height: 128px;
+}
+
+.coin-stack {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 6;
+}
+
+.coin-stack span {
+    width: 45px;
+    height: 13px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #d9f5ff, #72caff);
+    border: 2px solid rgba(8, 124, 245, 0.18);
+    box-shadow: 0 2px 0 rgba(8, 124, 245, 0.1);
+}
+
+.coin-stack-left {
+    left: 80px;
+    bottom: 67px;
+}
+
+.coin-stack-right {
+    right: 72px;
+    bottom: 80px;
+}
+
+.investor-plant {
+    position: absolute;
+    right: 70px;
+    bottom: 62px;
+    width: 130px;
+    height: 180px;
+    z-index: 7;
+}
+
+.plant-stem {
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    left: 62px;
+    bottom: 47px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #39bf91, #158e69);
+    transform: rotate(4deg);
+}
+
+.plant-leaf {
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    border-radius: 100% 0 100% 0;
+    background: linear-gradient(135deg, #61dbac, #159c76);
+}
+
+.plant-leaf-one {
+    left: 31px;
+    bottom: 118px;
+    transform: rotate(-35deg);
+}
+
+.plant-leaf-two {
+    left: 65px;
+    bottom: 125px;
+    transform: rotate(25deg);
+}
+
+.plant-leaf-three {
+    left: 28px;
+    bottom: 94px;
+    transform: rotate(-30deg);
+}
+
+.plant-leaf-four {
+    left: 65px;
+    bottom: 90px;
+    transform: rotate(30deg);
+}
+
+.plant-leaf-five {
+    left: 42px;
+    bottom: 145px;
+    transform: rotate(-10deg);
+}
+
+.plant-pot {
+    position: absolute;
+    left: 31px;
+    bottom: 0;
+    width: 75px;
+    height: 62px;
+}
+
+.pot-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 17px;
+    border-radius: 50%;
+    background: #77d3ff;
+    z-index: 2;
+}
+
+.pot-body {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 61px;
+    height: 55px;
+    border-radius: 5px 5px 25px 25px;
+    background: linear-gradient(180deg, #57b9e7, #2195d4);
+}
+
+.naxent-investor-coin {
+    position: absolute;
+    top: 48px;
+    right: 80px;
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffff, #d6f2ff);
+    box-shadow: 0 15px 35px rgba(30, 135, 220, 0.16);
+    z-index: 10;
+}
+
+.coin-inner {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #46baf3;
+    color: #087cf5;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.growth-card {
+    position: absolute;
+    top: 82px;
+    left: 30px;
+    min-width: 175px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 45px rgba(21, 119, 183, 0.12);
+    z-index: 10;
+}
+
+.growth-card-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    color: #087cf5;
+    background: #e4f6ff;
+}
+
+.growth-card-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.growth-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.growth-card-text span {
+    color: #7890ad;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.growth-card-text strong {
+    color: #092b69;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* WHY INVEST */
+.why-invest-section {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    overflow: hidden;
+    background: linear-gradient(115deg, #ffffff 0%, #f5fbff 48%, #e7f5ff 100%);
+    border-bottom: 1px solid #0b2a5b;
+}
+
+.why-invest-container {
+    position: relative;
+    z-index: 5;
+    width: min(1180px, calc(100% - 100px));
+    margin: 0 auto;
+    padding: 78px 0 82px;
+}
+
+.why-invest-heading {
+    margin-bottom: 38px;
+}
+
+.why-invest-heading h2 {
+    margin: 0;
+    color: #092b69;
+    font-size: clamp(48px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2.8px;
+}
+
+.why-invest-heading h2 span {
+    color: #087cf5;
+}
+
+.why-invest-line {
+    width: 120px;
+    height: 7px;
+    margin-top: 18px;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #d8edf9;
+}
+
+.why-invest-line span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #087cf5 0%, #1cc6e8 55%, #58d98c 100%);
+}
+
+.why-invest-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.why-invest-item {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    align-items: center;
+    column-gap: 22px;
+    max-width: 1090px;
+}
+
+.why-invest-icon {
+    width: 74px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #087ff5;
+    background: linear-gradient(145deg, #e4f8ff, #cdeaff);
+    flex-shrink: 0;
+}
+
+.why-invest-icon svg {
+    width: 43px;
+    height: 43px;
+}
+
+.why-invest-text p {
+    max-width: 1000px;
+    margin: 0;
+    color: #173d79;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 500;
+}
+
+.why-invest-text a {
+    color: #087cf5;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+
+.why-invest-top-shape {
+    position: absolute;
+    top: -145px;
+    left: -150px;
+    width: 470px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #168ff6, #63c9ff);
+    transform: rotate(-28deg);
+    opacity: 0.95;
+}
+
+.why-invest-top-shape::after {
+    content: "";
+    position: absolute;
+    top: 105px;
+    left: 90px;
+    width: 450px;
+    height: 110px;
+    border-radius: 50%;
+    border-top: 3px solid rgba(92, 190, 255, 0.55);
+    transform: rotate(-18deg);
+}
+
+.why-invest-bottom-shape {
+    position: absolute;
+    right: -170px;
+    bottom: -260px;
+    width: 800px;
+    height: 480px;
+    border-radius: 55% 0 0 0;
+    background: linear-gradient(145deg, rgba(89, 220, 191, 0.55), rgba(79, 178, 245, 0.95));
+    transform: rotate(-8deg);
+    opacity: 0.85;
+}
+
+.why-invest-bottom-shape::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: -80px;
+    width: 820px;
+    height: 400px;
+    border-radius: 50%;
+    border-top: 3px solid rgba(255, 255, 255, 0.8);
+    transform: rotate(-5deg);
+}
+
+.why-invest-bottom-shape::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -30px;
+    width: 780px;
+    height: 360px;
+    border-radius: 50%;
+    border-top: 3px solid rgba(71, 180, 248, 0.7);
+    transform: rotate(-7deg);
+}
+
+/* CONTACT */
+.investor-contact-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 95px 0 110px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5fbff 55%, #e9f7ff 100%);
+    border-bottom: 1px solid #0b2a5b;
+}
+
+.investor-contact-wrapper {
+    position: relative;
+    z-index: 5;
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.investor-contact-info {
+    max-width: 500px;
+}
+
+.investor-contact-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.investor-contact-logo img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.investor-contact-logo span {
+    color: #092b69;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.investor-contact-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: #087cf5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.investor-contact-eyebrow i {
+    width: 42px;
+    height: 3px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #087cf5, #54c8ff);
+}
+
+.investor-contact-info h2 {
+    margin: 0;
+    color: #092b69;
+    font-size: clamp(48px, 5vw, 68px);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.investor-contact-info h2 span {
+    color: #087cf5;
+}
+
+.investor-contact-description {
+    max-width: 470px;
+    margin: 27px 0 35px;
+    color: #617694;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.investor-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.investor-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.investor-contact-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    color: #087cf5;
+    background: #e6f6ff;
+}
+
+.investor-contact-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.investor-contact-item>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.investor-contact-item strong {
+    color: #092b69;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.investor-contact-item span {
+    color: #71849d;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+.investor-contact-form-card {
+    width: 100%;
+    padding: 38px;
+    border: 1px solid #0b2a5b;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 25px 70px rgba(17, 91, 145, 0.09);
+}
+
+.investor-contact-form-card h3 {
+    margin: 0 0 28px;
+    color: #092b69;
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 800;
+}
+
+.investor-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.investor-form-group {
+    width: 100%;
+}
+
+.investor-form-group input,
+.investor-form-message textarea {
+    width: 100%;
+    border: 1px solid #dce8f2;
+    outline: none;
+    border-radius: 10px;
+    background: #f9fcfe;
+    color: #173d79;
+    font-size: 14px;
+    font-weight: 500;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.investor-form-group input {
+    height: 52px;
+    padding: 0 16px;
+}
+
+.investor-form-group input::placeholder,
+.investor-form-message textarea::placeholder {
+    color: #91a2b5;
+}
+
+.investor-form-group input:focus,
+.investor-form-message textarea:focus {
+    border-color: #68baf0;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(8, 124, 245, 0.06);
+}
+
+.investor-contact-form-card h4 {
+    margin: 27px 0 13px;
+    color: #092b69;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.investor-form-message textarea {
+    min-height: 120px;
+    resize: vertical;
+    padding: 15px 16px;
+    line-height: 1.6;
+}
+
+.investor-submit-btn {
+    width: 100%;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(135deg, #087cf5, #149de8);
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 12px 25px rgba(8, 124, 245, 0.16);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.investor-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(8, 124, 245, 0.22);
+}
+
+.investor-submit-btn span {
+    font-size: 18px;
+}
+
+.investor-form-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.investor-footer-line {
+    flex: 1;
+    height: 1px;
+    background: #e1ebf3;
+}
+
+.investor-form-footer>span {
+    white-space: nowrap;
+    color: #8294a8;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.investor-form-footer a {
+    margin-left: 4px;
+    color: #087cf5;
+    font-weight: 700;
+}
+
+.investor-contact-curve {
+    position: absolute;
+    left: -5%;
+    bottom: -180px;
+    width: 110%;
+    height: 300px;
+    border-radius: 50% 50% 0 0;
+    background: #ffffff;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+    .investor-container {
+        width: min(100% - 60px, 1000px);
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .investor-title {
+        font-size: clamp(46px, 5vw, 60px);
+    }
+
+    .investor-visual {
+        transform: scale(0.92);
+    }
+
+    .investor-contact-wrapper {
+        width: min(100% - 60px, 1000px);
+        gap: 45px;
+    }
+
+    .investor-contact-info h2 {
+        font-size: clamp(46px, 5vw, 60px);
+    }
+
+    .why-invest-container {
+        width: min(100% - 70px, 1000px);
+    }
+}
+
+@media (max-width: 900px) {
+    .investors-page {
+        padding-top: 96px !important;
+    }
+
+    .investor-hero {
+        padding-top: 16px !important;
+    }
+
+    .investor-container {
+        grid-template-columns: 1fr;
+        padding: 16px 0 60px !important;
+        text-align: center;
+    }
+
+    .investor-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .investor-eyebrow {
+        justify-content: center;
+    }
+
+    .investor-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .investor-visual {
+        min-height: 460px;
+        max-width: 600px;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .why-invest-container {
+        padding: 70px 0;
+    }
+
+    .why-invest-heading {
+        text-align: center;
+    }
+
+    .why-invest-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why-invest-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .investor-contact-section {
+        padding: 75px 0 90px;
+    }
+
+    .investor-contact-wrapper {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        gap: 55px;
+    }
+
+    .investor-contact-info {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .investor-contact-logo,
+    .investor-contact-eyebrow {
+        justify-content: center;
+    }
+
+    .investor-contact-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .investor-contact-details {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .investors-page {
+        padding-top: 88px !important;
+    }
+
+    .investor-container {
+        width: calc(100% - 40px);
+        padding: 16px 0 40px !important;
+    }
+
+    .investor-title {
+        font-size: clamp(40px, 9vw, 52px);
+        letter-spacing: -2px;
+    }
+
+    .investor-description {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .investor-button {
+        min-height: 52px;
+        padding: 0 19px 0 21px;
+    }
+
+    .investor-visual {
+        min-height: 390px;
+        transform: scale(0.88);
+        transform-origin: center top;
+        margin-bottom: -40px;
+    }
+
+    .visual-circle {
+        width: 320px;
+        height: 320px;
+    }
+
+    .growth-arrow {
+        width: 450px;
+    }
+
+    .growth-chart {
+        left: 30px;
+        bottom: 50px;
+        transform: scale(0.85);
+        transform-origin: left bottom;
+    }
+
+    .coin-stack-left {
+        left: 50px;
+        bottom: 55px;
+    }
+
+    .coin-stack-right {
+        right: 45px;
+        bottom: 60px;
+    }
+
+    .investor-plant {
+        right: 40px;
+        bottom: 45px;
+        transform: scale(0.82);
+        transform-origin: bottom right;
+    }
+
+    .naxent-investor-coin {
+        right: 50px;
+        transform: scale(0.85);
+        transform-origin: top right;
+    }
+
+    .growth-card {
+        left: 15px;
+        transform: scale(0.88);
+        transform-origin: top left;
+    }
+
+    .why-invest-container {
+        width: calc(100% - 40px);
+        padding: 60px 0 70px;
+    }
+
+    .why-invest-heading h2 {
+        font-size: clamp(40px, 9vw, 52px);
+        letter-spacing: -2px;
+    }
+
+    .why-invest-item {
+        grid-template-columns: 65px 1fr;
+        column-gap: 16px;
+    }
+
+    .why-invest-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .why-invest-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .why-invest-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .why-invest-top-shape {
+        width: 300px;
+        height: 190px;
+        top: -100px;
+        left: -130px;
+    }
+
+    .why-invest-bottom-shape {
+        width: 550px;
+        height: 330px;
+        right: -190px;
+        bottom: -210px;
+    }
+
+    .investor-contact-section {
+        padding: 65px 0 75px;
+    }
+
+    .investor-contact-wrapper {
+        width: calc(100% - 40px);
+        gap: 45px;
+    }
+
+    .investor-contact-logo {
+        margin-bottom: 35px;
+    }
+
+    .investor-contact-info h2 {
+        font-size: clamp(40px, 9vw, 52px);
+        letter-spacing: -2px;
+    }
+
+    .investor-contact-description {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .investor-contact-form-card {
+        padding: 28px 22px;
+        border-radius: 22px;
+    }
+
+    .investor-contact-form-card h3 {
+        font-size: 19px;
+    }
+
+    .investor-form-row {
+        grid-template-columns: 1fr;
+        gap: 13px;
+        margin-bottom: 13px;
+    }
+
+    .investor-contact-form-card h4 {
+        margin-top: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    .investors-page {
+        padding-top: 80px !important;
+    }
+
+    .investor-hero {
+        padding-top: 12px !important;
+    }
+
+    .investor-container {
+        width: calc(100% - 28px);
+        padding-top: 12px !important;
+    }
+
+    .investor-eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+    }
+
+    .investor-eyebrow-line {
+        width: 30px;
+    }
+
+    .investor-title {
+        font-size: 39px;
+        line-height: 1.06;
+        letter-spacing: -1.8px;
+    }
+
+    .investor-description {
+        font-size: 14px;
+        margin-top: 22px;
+        margin-bottom: 27px;
+    }
+
+    .investor-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .investor-visual {
+        min-height: 330px;
+        transform: scale(0.76);
+        margin-top: -15px;
+        margin-bottom: -70px;
+    }
+
+    .visual-circle {
+        width: 290px;
+        height: 290px;
+    }
+
+    .visual-dots {
+        right: 5px;
+    }
+
+    .growth-card {
+        top: 65px;
+        left: 5px;
+    }
+
+    .naxent-investor-coin {
+        top: 35px;
+        right: 25px;
+    }
+
+    .growth-chart {
+        left: 15px;
+        bottom: 40px;
+    }
+
+    .coin-stack-left {
+        left: 28px;
+        bottom: 42px;
+    }
+
+    .coin-stack-right {
+        right: 25px;
+        bottom: 48px;
+    }
+
+    .investor-plant {
+        right: 20px;
+        bottom: 35px;
+    }
+
+    .why-invest-container {
+        width: calc(100% - 28px);
+        padding: 52px 0 60px;
+    }
+
+    .why-invest-heading {
+        margin-bottom: 30px;
+    }
+
+    .why-invest-heading h2 {
+        font-size: 38px;
+        letter-spacing: -1.8px;
+    }
+
+    .why-invest-line {
+        width: 90px;
+        height: 6px;
+    }
+
+    .why-invest-content {
+        gap: 22px;
+    }
+
+    .why-invest-item {
+        grid-template-columns: 54px 1fr;
+        column-gap: 12px;
+        align-items: start;
+    }
+
+    .why-invest-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .why-invest-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .why-invest-text p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .investor-contact-section {
+        padding: 55px 0 65px;
+    }
+
+    .investor-contact-wrapper {
+        width: calc(100% - 28px);
+    }
+
+    .investor-contact-logo {
+        margin-bottom: 28px;
+    }
+
+    .investor-contact-logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .investor-contact-logo span {
+        font-size: 20px;
+    }
+
+    .investor-contact-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    .investor-contact-info h2 {
+        font-size: 39px;
+        line-height: 1.06;
+        letter-spacing: -1.8px;
+    }
+
+    .investor-contact-description {
+        font-size: 14px;
+    }
+
+    .investor-contact-item {
+        gap: 11px;
+    }
+
+    .investor-contact-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .investor-contact-item strong {
+        font-size: 12px;
+    }
+
+    .investor-contact-item span {
+        font-size: 12px;
+    }
+
+    .investor-contact-form-card {
+        padding: 24px 17px;
+        border-radius: 18px;
+    }
+
+    .investor-contact-form-card h3 {
+        font-size: 17px;
+        margin-bottom: 22px;
+    }
+
+    .investor-form-group input {
+        height: 49px;
+        font-size: 13px;
+    }
+
+    .investor-form-message textarea {
+        font-size: 13px;
+    }
+
+    .investor-contact-form-card h4 {
+        font-size: 12px;
+    }
+
+    .investor-submit-btn {
+        min-height: 50px;
+        font-size: 13px;
+    }
+
+    .investor-form-footer {
+        gap: 7px;
+    }
+
+    .investor-form-footer>span {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 360px) {
+    .investor-container {
+        width: calc(100% - 22px);
+    }
+
+    .investor-title {
+        font-size: 34px;
+    }
+
+    .investor-description {
+        font-size: 13px;
+    }
+
+    .investor-button {
+        font-size: 13px;
+    }
+
+    .investor-visual {
+        transform: scale(0.66);
+        margin-bottom: -100px;
+    }
+
+    .why-invest-container {
+        width: calc(100% - 22px);
+    }
+
+    .why-invest-heading h2 {
+        font-size: 34px;
+    }
+
+    .why-invest-item {
+        grid-template-columns: 48px 1fr;
+        column-gap: 10px;
+    }
+
+    .why-invest-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .why-invest-icon svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .why-invest-text p {
+        font-size: 13px;
+    }
+
+    .investor-contact-wrapper {
+        width: calc(100% - 22px);
+    }
+
+    .investor-contact-info h2 {
+        font-size: 34px;
+    }
+
+    .investor-contact-form-card {
+        padding: 20px 14px;
+    }
+
+    .investor-contact-form-card h3 {
+        font-size: 16px;
+    }
+}

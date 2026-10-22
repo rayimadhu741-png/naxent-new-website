@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: center;
+    background: #EEF4FF;
+    box-sizing: border-box;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-bottom: 1.5px solid #0A1F4A !important;
+}
+
+.header-show {
+    transform: translateY(0);
+}
+
+.header-hide {
+    transform: translateY(-130%);
+}
+
+.header {
+    width: 100%;
+    max-width: 1240px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 0 14px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    border: 1px solid #E6EDF8;
+    box-shadow: 0 2px 12px rgba(11, 37, 84, 0.06);
+    box-sizing: border-box;
+    position: relative;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 60px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0A1F4A;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1E2A44;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 8px 2px;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: #2563EB;
+}
+
+.nav a.active {
+    color: #2563EB;
+    font-weight: 600;
+}
+
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #2563EB;
+    border-radius: 100px;
+}
+
+.talk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 0 20px;
+    background: #2563EB;
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    flex-shrink: 0;
+    border: 1px solid #2563EB;
+    transition: 0.25s ease;
+}
+
+.talk-btn:hover {
+    background: #0B2554;
+    border-color: #0B2554;
+}
+
+.mobile-top-bar,
+.close-btn-mobile,
+.talk-btn-mobile,
+.nav-overlay {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #EEF5FF;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+/* Laptop 1024-1280 */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .header-wrapper {
+        padding: 10px 20px;
+    }
+
+    .header {
+        max-width: 1050px;
+        height: 54px;
+    }
+
+    .nav {
+        gap: 18px;
+    }
+
+    .nav a {
+        font-size: 13.5px;
+    }
+
+    .logo span {
+        font-size: 13px;
+    }
+}
+
+/* Tablet 769-1023 */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .header-wrapper {
+        padding: 10px 16px;
+    }
+
+    .header {
+        height: 52px;
+        padding: 0 8px 0 12px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .logo img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .logo span {
+        font-size: 13px;
+    }
+
+    .talk-btn {
+        height: 36px;
+        padding: 0 16px;
+        font-size: 12.5px;
+    }
+}
+
+/* Mobile 0-840 */
+@media (max-width: 840px) {
+    .header-wrapper {
+        padding: 8px 12px;
+    }
+
+    .header {
+        height: 48px;
+        padding: 0 6px 0 12px;
+        gap: 8px;
+    }
+
+    .logo {
+        gap: 6px;
+    }
+
+    .logo img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo span {
+        font-size: 12.5px;
+        letter-spacing: 1px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .talk-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        background: #EEF5FF;
+    }
+
+    .nav.nav-open {
+        display: flex;
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        border-radius: 20px;
+        border: 1px solid #E6EDF8;
+        box-shadow: 0 16px 40px rgba(11, 37, 84, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 0 16px 0;
+        z-index: 1002;
+        gap: 0;
+        animation: slideDown 0.25s ease;
+    }
+
+    .mobile-top-bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 18px;
+        border-bottom: 1px solid #EEF5FF;
+    }
+
+    .mobile-top-bar span {
+        font-size: 13px;
+        font-weight: 700;
+        color: #0A1F4A;
+    }
+
+    .close-btn-mobile {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        background: #EEF5FF;
+        border: none;
+        border-radius: 50%;
+        place-items: center;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .nav.nav-open a {
+        display: flex;
+        width: 100%;
+        min-height: 48px;
+        padding: 14px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #1E2A44;
+        border-bottom: 1px solid #F6F8FC;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .nav.nav-open a:hover,
+    .nav.nav-open a.active {
+        background: #F8FAFF;
+        color: #2563EB;
+    }
+
+    .nav.nav-open a.active::after {
+        display: none;
+    }
+
+    /* =========================================================
+       ONLY THIS PART FIXED - LET'S TALK BUTTON PROPER
+       Menu click chesinappudu proper ga kanipinchali
+    ========================================================= */
+    .talk-btn-mobile {
+        display: flex !important;
+        width: calc(100% - 32px) !important;
+        height: 48px !important;
+        margin: 16px auto 4px !important;
+        background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+        background-color: #2563EB !important;
+        color: #FFFFFF !important;
+        border-radius: 12px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        text-decoration: none !important;
+        font-weight: 700 !important;
+        font-size: 14.5px !important;
+        letter-spacing: -0.2px !important;
+        border: none !important;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.28) !important;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .talk-btn-mobile:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35) !important;
+    }
+
+    .talk-btn-mobile::after {
+        content: "→" !important;
+        font-size: 16px !important;
+        transition: transform 0.3s !important;
+    }
+
+    .talk-btn-mobile:hover::after {
+        transform: translateX(4px) !important;
+    }
+
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(11, 37, 84, 0.18);
+        backdrop-filter: blur(2px);
+        z-index: 999;
+        animation: fadeIn 0.25s ease;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-wrapper {
+        padding: 6px 10px;
+    }
+
+    .header {
+        height: 44px;
+        padding: 0 5px 0 10px;
+    }
+
+    .logo img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .logo span {
+        font-size: 11.5px;
+    }
+
+    .menu-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .nav.nav-open {
+        top: calc(100% + 8px);
+        border-radius: 16px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

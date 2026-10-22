@@ -1,0 +1,162 @@
+.beyond-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    overflow: hidden
+}
+
+.beyond-left {
+    position: relative;
+    overflow: hidden;
+    min-height: 540px
+}
+
+.beyond-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92);
+    transition: transform .6s ease
+}
+
+.beyond-left:hover img {
+    transform: scale(1.03)
+}
+
+.beyond-overlay {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    background: rgba(17, 43, 99, 0.88);
+    backdrop-filter: blur(8px);
+    padding: 24px;
+    border-radius: 16px;
+    color: #fff
+}
+
+.beyond-right {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.beyond-eyebrow {
+    margin: 0 0 12px;
+    color: var(--action-blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase
+}
+
+.beyond-right h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px
+}
+
+.beyond-list {
+    margin: 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.beyond-list div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--soft-blue-bg);
+    border: 1px solid var(--soft-border);
+    border-radius: 10px;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    transition: all .25s ease
+}
+
+.beyond-list div span {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--action-blue);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.beyond-list div:hover {
+    background: var(--white);
+    border-color: var(--action-blue);
+    transform: translateX(6px)
+}
+
+/* EXPLORE SERVICES BUTTON - NAVY HOVER ANIMATION */
+.beyond-btn {
+    align-self: flex-start;
+    position: relative;
+    height: 46px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--action-blue);
+    border: 1px solid var(--action-blue);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14.5px;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+    transition: all .3s ease;
+}
+
+.beyond-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0B2554;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.beyond-btn:hover::before {
+    transform: scaleX(1);
+}
+
+.beyond-btn:hover {
+    border-color: #0B2554;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(11, 37, 84, .28);
+}
+
+@media(max-width:900px) {
+    .beyond-section {
+        grid-template-columns: 1fr
+    }
+
+    .beyond-left {
+        min-height: 380px
+    }
+
+    .beyond-right {
+        padding: 56px 32px
+    }
+}
